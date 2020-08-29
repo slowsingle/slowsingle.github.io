@@ -2,6 +2,7 @@
 <html lang='ja'>
   
 <head>
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
 
@@ -10,40 +11,28 @@
 
 <body>
   <div id="app" v-cloak>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">MyPage</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Hoge(Not Used)</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <header-component></header-component>
 
-    <div class="container">
-      <p>{{ message }}</p>
+    <main class="site-main">
+      <div class="container">
+        <p>{{ message }}</p>
 
-      <div class="row">
-        <div class="col-sm" v-for="postUrl in postUrlList">
-          <div class="card" style="width: 18rem;">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">Image cap</text></svg>
-            <div class="card-body">
-              <h5 class="card-title">{{postUrl}}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a v-bind:href="postUrl" class="btn btn-primary">Go somewhere</a>
+        <div class="row">
+          <div class="col-sm" style="padding-bottom: 10px" v-for="postUrl in postUrlList">
+            <div class="card" style="width: 18rem;">
+              <img class="bd-placeholder-img card-img-top" width="100%" src="http://placehold.jp/300x200.png">
+              <div class="card-body">
+                <h5 class="card-title">{{postUrl}}</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a v-bind:href="postUrl" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </main>
 
+    <footer-component></footer-component>
 
   </div>
 

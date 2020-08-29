@@ -1,3 +1,18 @@
 [v-cloak] {
   display: none;
 }
+
+.site-header {
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.site-main {
+  padding: 60px 0 0 0;
+}
+
+.site-footer {
+  height: 100px;
+  color: #ffffff;
+}
