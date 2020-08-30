@@ -32,10 +32,16 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello, World!',
-    postUrlList: [
-      'posts/post-2020xxxx.html',
-      'posts/post-2020yyyy.html',
-      'posts/post-2020zzzz.html',
-    ]
+    numOfPosts: 3,
+  },
+  computed: {
+    getPostUrlList: function() {
+      let originUrl = location.origin;
+      let postUrlList = [];
+      for(let i=1; i<this.numOfPosts+1; i++) {
+        postUrlList.push(originUrl + "/" + String(i) + ".html");
+      }
+      return postUrlList;
+    }
   }
 })
