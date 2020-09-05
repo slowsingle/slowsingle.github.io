@@ -38,7 +38,7 @@ var app = new Vue({
   created: function() {
     const _home = ["/", "/index.html"]
     if (!_home.includes(location.pathname)) {
-      console.log("Do Nothing.");
+      //console.log("Do Nothing.");
       return;
     }
 
@@ -58,12 +58,12 @@ var app = new Vue({
         // handle error
         post.theme = "No Name"
         post.url = originUrl + localUrl;  // 404.htmlに飛ばしたい
-        console.log(error);
+        //console.log(error);
       })
       .then(() => {
         this.postInfo.push(post);
       })
     }
-    console.log(this.postInfo);
+    //console.log(this.postInfo);
   }
 })
