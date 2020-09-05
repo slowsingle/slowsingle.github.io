@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang='ja'>
-  
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -14,20 +14,15 @@
     <header-component></header-component>
 
     <main class="site-main">
-      <div class="container">
-        <p>{{ message }}</p>
+      <div class="container" style="max-width:750px;">
+        <div class="border" style="padding:10px;">
+          <!-- ここからコンテンツを載せる -->
+          <h1 id="theme">無題</h1>
 
-        <div class="row">
-          <div class="col-sm" style="padding-bottom: 10px" v-for="post in postInfo" :key="post.theme">
-            <div class="card" style="width: 18rem;">
-              <img class="bd-placeholder-img card-img-top" width="100%" src="/images/300x200.png">
-              <div class="card-body">
-                <h5 class="card-title">{{ post.theme }}</h5>
-                <p class="card-text">（概要を簡潔に表示させたい）</p>
-                <a v-bind:href="post.url" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
+          <p>
+            これから書きます。
+          </p>
+
         </div>
       </div>
     </main>
@@ -36,7 +31,6 @@
 
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script type='text/javascript' src='/js/main.js'></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -44,5 +38,5 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 </body>
-  
+
 </html>

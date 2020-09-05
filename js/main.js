@@ -32,7 +32,7 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello, World!',
-    numOfPosts: 3,
+    numOfPosts: 4,
     postInfo: [],
   },
   created: function() {
