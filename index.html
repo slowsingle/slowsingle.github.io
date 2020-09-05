@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/style.css">
 
-  <title>My Page</title>
+  <title>My Experimental Pages</title>
 </head>
 
 <body>
@@ -18,13 +18,13 @@
         <p>{{ message }}</p>
 
         <div class="row">
-          <div class="col-sm" style="padding-bottom: 10px" v-for="postUrl in getPostUrlList">
+          <div class="col-sm" style="padding-bottom: 10px" v-for="post in postInfo" :key="post.theme">
             <div class="card" style="width: 18rem;">
               <img class="bd-placeholder-img card-img-top" width="100%" src="/images/300x200.png">
               <div class="card-body">
-                <h5 class="card-title">{{postUrl}}</h5>
+                <h5 class="card-title">{{ post.theme }}</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a v-bind:href="postUrl" class="btn btn-primary">Go somewhere</a>
+                <a v-bind:href="post.url" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -36,6 +36,7 @@
 
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script type='text/javascript' src='/js/main.js'></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
